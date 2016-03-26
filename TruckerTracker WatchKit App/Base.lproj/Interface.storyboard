@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TruckerTracker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="Unit #" id="8Cg-eK-fo5"/>
+                        <label width="136" alignment="left" text="Year" id="HGV-Ab-gvh"/>
+                        <label width="136" alignment="left" text="Make" id="XPL-fC-AX5"/>
+                        <label width="136" alignment="left" text="Model" id="jnr-HX-EuX"/>
+                        <label alignment="left" text="VIN" id="Cxe-NN-PfA"/>
+                    </items>
+                    <connections>
+                        <outlet property="makeLabel" destination="XPL-fC-AX5" id="gh3-Ff-9kZ"/>
+                        <outlet property="modelLabel" destination="jnr-HX-EuX" id="ntV-4S-og2"/>
+                        <outlet property="unitLabel" destination="8Cg-eK-fo5" id="95f-qd-g0x"/>
+                        <outlet property="vinLabel" destination="Cxe-NN-PfA" id="Xdb-YB-kho"/>
+                        <outlet property="yearLabel" destination="HGV-Ab-gvh" id="vne-MN-E0o"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="375" y="293"/>
+        </scene>
+    </scenes>
+</document>
