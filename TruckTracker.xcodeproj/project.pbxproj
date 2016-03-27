@@ -27,6 +27,13 @@
 		1A6089281CA4A9A900727C51 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6089271CA4A9A900727C51 /* ExtensionDelegate.swift */; };
 		1A60892A1CA4A9A900727C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A6089291CA4A9A900727C51 /* Assets.xcassets */; };
 		1A60892E1CA4A9AA00727C51 /* TruckerTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1A6089141CA4A9A900727C51 /* TruckerTracker WatchKit App.app */; };
+		1A6089381CA7A41500727C51 /* PartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6089371CA7A41500727C51 /* PartTableViewCell.swift */; };
+		1A60893A1CA82DC800727C51 /* NewPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6089391CA82DC800727C51 /* NewPartViewController.swift */; };
+		1A60893C1CA8398200727C51 /* VendorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60893B1CA8398200727C51 /* VendorTableViewCell.swift */; };
+		1A60893E1CA83C0C00727C51 /* VendorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60893D1CA83C0C00727C51 /* VendorsTableViewController.swift */; };
+		1A6089401CA83D0F00727C51 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60893F1CA83D0F00727C51 /* Vendor.swift */; };
+		1A6089421CA8439400727C51 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6089411CA8439400727C51 /* Part.swift */; };
+		1A6089461CA845B400727C51 /* PartsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6089451CA845B400727C51 /* PartsTableViewController.swift */; };
 		1AB74C321C97A0890023EB99 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB74C311C97A0890023EB99 /* Vehicle.swift */; };
 		1AB74C341C97AA550023EB99 /* mack04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AB74C331C97AA550023EB99 /* mack04.jpg */; };
 /* End PBXBuildFile section */
@@ -116,6 +123,13 @@
 		1A6089271CA4A9A900727C51 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		1A6089291CA4A9A900727C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A60892B1CA4A9A900727C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6089371CA7A41500727C51 /* PartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartTableViewCell.swift; sourceTree = "<group>"; };
+		1A6089391CA82DC800727C51 /* NewPartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPartViewController.swift; sourceTree = "<group>"; };
+		1A60893B1CA8398200727C51 /* VendorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorTableViewCell.swift; sourceTree = "<group>"; };
+		1A60893D1CA83C0C00727C51 /* VendorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorsTableViewController.swift; sourceTree = "<group>"; };
+		1A60893F1CA83D0F00727C51 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		1A6089411CA8439400727C51 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		1A6089451CA845B400727C51 /* PartsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsTableViewController.swift; sourceTree = "<group>"; };
 		1AB74C311C97A0890023EB99 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		1AB74C331C97AA550023EB99 /* mack04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mack04.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,10 +203,17 @@
 				1A2085D81C0BD78A00260889 /* truck-256.png */,
 				1A2085D61C0BD63400260889 /* junk 046.jpg */,
 				1A2085D41C0BD1DF00260889 /* TrucksTableViewController.swift */,
-				1A2085DA1C0BD9F600260889 /* VehicleTableViewCell.swift */,
 				1A2085E41C0C0DBF00260889 /* ContactsTableViewController.swift */,
+				1A6089451CA845B400727C51 /* PartsTableViewController.swift */,
+				1A2085DA1C0BD9F600260889 /* VehicleTableViewCell.swift */,
+				1A60893D1CA83C0C00727C51 /* VendorsTableViewController.swift */,
 				1A2085E61C0C199800260889 /* Contact.swift */,
+				1A6089411CA8439400727C51 /* Part.swift */,
+				1A60893F1CA83D0F00727C51 /* Vendor.swift */,
 				1AB74C311C97A0890023EB99 /* Vehicle.swift */,
+				1A6089391CA82DC800727C51 /* NewPartViewController.swift */,
+				1A6089371CA7A41500727C51 /* PartTableViewCell.swift */,
+				1A60893B1CA8398200727C51 /* VendorTableViewCell.swift */,
 			);
 			path = TruckTracker;
 			sourceTree = "<group>";
@@ -432,11 +453,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A6089381CA7A41500727C51 /* PartTableViewCell.swift in Sources */,
 				1AB74C321C97A0890023EB99 /* Vehicle.swift in Sources */,
 				1A2085DB1C0BD9F600260889 /* VehicleTableViewCell.swift in Sources */,
+				1A6089461CA845B400727C51 /* PartsTableViewController.swift in Sources */,
 				1A2085A71C0BD16A00260889 /* AppDelegate.swift in Sources */,
+				1A6089421CA8439400727C51 /* Part.swift in Sources */,
 				1A2085E71C0C199800260889 /* Contact.swift in Sources */,
 				1A2085E51C0C0DBF00260889 /* ContactsTableViewController.swift in Sources */,
+				1A60893E1CA83C0C00727C51 /* VendorsTableViewController.swift in Sources */,
+				1A6089401CA83D0F00727C51 /* Vendor.swift in Sources */,
+				1A60893C1CA8398200727C51 /* VendorTableViewCell.swift in Sources */,
+				1A60893A1CA82DC800727C51 /* NewPartViewController.swift in Sources */,
 				1A2085D51C0BD1DF00260889 /* TrucksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
