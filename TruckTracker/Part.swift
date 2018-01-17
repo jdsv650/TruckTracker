@@ -8,12 +8,12 @@
 
 import Foundation
 
-public class Part
+open class Part
 {
     var partNumber = ""
     var partDescription = ""
     var make = ""
     var vendor = Vendor()
     var priceRecorded: Double?
-    var dateRecorded: NSDate?
+    var dateRecorded: Date?
 }

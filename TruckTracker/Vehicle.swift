@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Vehicle
+open class Vehicle
 {
     var unit = ""
     var make = ""

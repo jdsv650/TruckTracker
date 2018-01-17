@@ -29,7 +29,7 @@ class ContactsTableViewController: UITableViewController {
     
     
     
-    @IBAction func addPressed(sender: UIBarButtonItem)
+    @IBAction func addPressed(_ sender: UIBarButtonItem)
     {
        
         let store = CNContactStore()
@@ -37,17 +37,17 @@ class ContactsTableViewController: UITableViewController {
         {
             
             let containerId = CNContactStore().defaultContainerIdentifier()
-            let predicate: NSPredicate = CNContact.predicateForContactsInContainerWithIdentifier(containerId)
+            let predicate: NSPredicate = CNContact.predicateForContactsInContainer(withIdentifier: containerId)
             
-        let contacts = try store.unifiedContactsMatchingPredicate(predicate, keysToFetch: [CNContactGivenNameKey, CNContactFamilyNameKey,CNContactPhoneNumbersKey])
+        let contacts = try store.unifiedContacts(matching: predicate, keysToFetch: [CNContactGivenNameKey as CNKeyDescriptor, CNContactFamilyNameKey as CNKeyDescriptor,CNContactPhoneNumbersKey as CNKeyDescriptor])
         
             /***
         let contacts = try store.unifiedContactsMatchingPredicate(CNContact.predicateForContactsMatchingName("Buff"), keysToFetch:[CNContactGivenNameKey, CNContactFamilyNameKey,CNContactPhoneNumbersKey])
 
 **/
-            for contact in contacts
+            for _ in contacts
             {
-                var c = Contact()
+                let c = Contact()
                 
                 //c.familyName = contact.phoneNumbers
                 
@@ -73,12 +73,12 @@ class ContactsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }

@@ -20,12 +20,12 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var unitLabel: WKInterfaceLabel!
     
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
-        let watchSession = WCSession.defaultSession()
+        let watchSession = WCSession.default
         watchSession.delegate = self
-        watchSession.activateSession()
+        watchSession.activate()
         
         // Configure interface objects here.
     }
@@ -45,10 +45,16 @@ class InterfaceController: WKInterfaceController {
 
 
 extension InterfaceController: WCSessionDelegate {
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("not implemented")
+    }
+
     
-    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         print("\(applicationContext)")
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
         
             print("App Context count of key val pairs = \(applicationContext.count)")
             

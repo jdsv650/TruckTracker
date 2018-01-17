@@ -10,6 +10,24 @@ import UIKit
 import WatchConnectivity
 
 class TrucksTableViewController: UITableViewController, WCSessionDelegate {
+    /** Called when all delegate callbacks for the previously selected watch has occurred. The session can be re-activated for the now selected watch using activateSession. */
+    @available(iOS 9.3, *)
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("")
+    }
+
+    /** Called when the session can no longer be used to modify or add any new transfers and, all interactive messages will be cancelled, but delegate callbacks for background transfers can still occur. This will happen when the selected watch is being changed. */
+    @available(iOS 9.3, *)
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("")
+    }
+
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(iOS 9.3, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("")
+    }
+
 
     var trucks = [Vehicle]()
     
@@ -52,17 +70,17 @@ class TrucksTableViewController: UITableViewController, WCSessionDelegate {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trucks.count
     }
 
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! VehicleTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VehicleTableViewCell
 
         // Configure the cell...
         cell.truckImageView.image = UIImage(named: "truck-256.png")
@@ -75,16 +93,16 @@ class TrucksTableViewController: UITableViewController, WCSessionDelegate {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
         if WCSession.isSupported() {
             
-            let watchSession = WCSession.defaultSession()
+            let watchSession = WCSession.default
             watchSession.delegate = self
-            watchSession.activateSession()
+            watchSession.activate()
             
-            if watchSession.paired && watchSession.watchAppInstalled {
+            if watchSession.isPaired && watchSession.isWatchAppInstalled {
                 do
                 {
                     try watchSession.updateApplicationContext(

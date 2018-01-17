@@ -24,22 +24,22 @@ class NewPartViewController: UIViewController, UITextFieldDelegate {
         vendorTF.delegate = self
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         theDescriptionTV.becomeFirstResponder()
     }
     
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         print("didbeginediting")
         
         if textField == vendorTF
         {
-            self.performSegueWithIdentifier("vendorSegue", sender: self)
+            self.performSegue(withIdentifier: "vendorSegue", sender: self)
         }
     }
 
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "vendorSegue"
         {
             

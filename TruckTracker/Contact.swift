@@ -9,7 +9,7 @@
 import Foundation
 
 
-public class Contact
+open class Contact
 {
     var givenName = ""
     var familyName = ""

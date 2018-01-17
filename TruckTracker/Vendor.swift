@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Vendor
+open class Vendor
 {
     
     var name = ""
